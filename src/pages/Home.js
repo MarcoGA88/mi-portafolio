@@ -4,6 +4,7 @@ import { MapPin} from 'lucide-react';
 import IcoFigma from '../images/figma.png';
 import IcoCss from '../images/css3.png';
 import IcoHtml from '../images/html5.png';
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -12,7 +13,7 @@ function Home() {
       <div className='px-5'>
         <h1 className="text-5xl sm:text-5xl md:text-5xl mb-4 ml-0 py-5 mt-20">Hola a todos, soy Marco</h1>
         <p className="text-base md:text-base text-gray-400 mb-6 pr-32">
-        Bienvenido a mi portafolio. Soy un estudiante de ingeniería en software, con experiencia en diseño y desarrollo web y algunos lenguajes de porgramación como C/C++, JavaScript y Phyton. Mi pasión es crear soluciones digitales innovadoras que no solo cumplen con los requisitos técnicos, sino que también deleitan a los usuarios.
+        Bienvenido a mi portafolio. Soy un estudiante de ingeniería en software, con experiencia en diseño y desarrollo web y algúnos lenguajes de porgramación como C/C++, JavaScript y C#. Mi pasión es crear soluciones digitales innovadoras que no solo cumplen con los requisitos técnicos, sino que también deleitan a los usuarios.
         </p>
 
         {/* Location and Button */}
@@ -21,7 +22,7 @@ function Home() {
             <span><icon><MapPin color='rgb(110 231 183)' /></icon></span>
             <span>Ambato, Ecuador</span>
           </div>
-          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light" style={{ letterSpacing: '0.85em' }}>.........................................................</div>
+          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.........................................................</div>
           <Link
             to="/about"
             className="bg-transparent border border-gray-500 hover:bg-gray-700 hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4  rounded-xl hover:border-emerald-300"
@@ -33,18 +34,18 @@ function Home() {
       </div>
 
       {/* Recent Projects Section */}
-      <div className="w-full max-w-6xl pl-1">
-        <h2 className="text-2xl md:text-3xl mb-8 text-left">Recent Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div className="w-full max-w-6xl pl-1 py-4 mt-3">
+        <h2 className="text-2xl md:text-3xl mb-8 text-left px-5">Recent Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5">
           {/* Project 1 */}
           <div className="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:border-emerald-300 hover:border">
             <img
               src="path-to-project-1-image"
               alt="Project 1"
-              className="w-full h-48 object-cover mb-4"
+              className="w-full h-80 object-cover mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Project 1</h3>
-            <p className="text-gray-400n">A brief description of the project.</p>
+            <p className="text-gray-400">A brief description of the project.</p>
           </div>
 
           {/* Project 2 */}
@@ -52,7 +53,7 @@ function Home() {
             <img
               src="path-to-project-2-image"
               alt="Project 2"
-              className="w-full h-48 object-cover mb-4"
+              className="w-full h-80 object-cover mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Project 2</h3>
             <p className="text-gray-400">A brief description of the project.</p>
@@ -60,21 +61,21 @@ function Home() {
         </div>
       </div>
       <div className="flex flex-col md:flex-row items-start justify-start space-y-2 md:space-y-0 md:space-x-4 mb-10 text-xs pt-10">
-          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
+          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
           <Link
             to="/projects"
             className="bg-transparent border border-gray-500 hover:bg-gray-700 hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 rounded-xl hover:border-emerald-300"
           >
-            Ver todos los proyectos →
+            Ver más →
           </Link>
       </div>
 
         {/* Stack Section */}
-        <div className="w-full max-w-6xl pl-1">
-          <h2 className="text-2xl md:text-3xl mb-8 text-left">Stack</h2>
-          <div className="grid grid-cols-3 md:grid-cols-3 sm:grid-cols-2 gap-8">
+        <div className="w-full max-w-6xl pl-1 md:w-full py-4 mt-3">
+          <h2 className="text-2xl md:text-3xl mb-8 text-left px-5">Stack</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8 px-5">
             {/* Stack 1*/}
-            <div className="bg-gray-900 p-6 rounded-xl cursor-pointer hover:border-emerald-300 border-gray-900 border md:h-28 sm:h-40 flex">
+            <div className="bg-gray-900 p-6 rounded-xl border-gray-900 border md:h-28 sm:h-40 flex">
               <img
                 src={IcoFigma}
                 alt="Figma"
@@ -88,7 +89,7 @@ function Home() {
             </div>
 
             {/* Stack 2 */}
-            <div className="bg-gray-900 p-6 rounded-xl cursor-pointer hover:border-emerald-300 border-gray-900 border md:h-28 sm:h-40 flex">
+            <div className="bg-gray-900 p-6 rounded-xl  border-gray-900 border md:h-28 sm:h-40 flex">
               <img
                 src={IcoCss}
                 alt="Css"
@@ -101,7 +102,7 @@ function Home() {
             </div>
 
               {/* Stack 3 */}
-              <div className="bg-gray-900 p-6 rounded-xl cursor-pointer hover:border-emerald-300 border-gray-900 border md:h-28 sm:h-40 flex">
+              <div className="bg-gray-900 p-6 rounded-xl border-gray-900 border md:h-28 sm:h-40 flex">
               <img
                   src={IcoHtml}
                   alt="Html"
@@ -116,14 +117,27 @@ function Home() {
           </div>
         </div>
         <div className="flex flex-col md:flex-row items-start justify-start space-y-2 md:space-y-0 md:space-x-4 mb-10 text-xs pt-10">
-          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
+          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
           <Link
             to="/stack"
             className="bg-transparent border border-gray-500 hover:bg-gray-700 hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 rounded-xl hover:border-emerald-300"
           >
-            Ver todo el stack →
+            Ver más →
           </Link>
       </div>
+            {/* Contact Section */}
+            <div className="w-full max-w-6xl pl-1">
+          <div className="px-5">
+            {/* Stack 1*/}
+            <Link
+            to="/contact"
+            className="bg-transparent hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 "
+            >
+            <p className="text-9xl mb-2 text-center"> ¡Contáctame! </p>
+            </Link>
+          </div>
+        </div>
+      <Footer></Footer>
     </div>
   );
 }
