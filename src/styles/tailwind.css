@@ -27,3 +27,45 @@
     scrollbar-width: thin;
     scrollbar-color: #888 #1a1a1a;
   }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Oculta las flechas por defecto */
+  .flecha-oculta {
+    opacity: 0;
+    transform: translateX(0); /* Sin movimiento */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  /* Activa la animación y muestra las flechas al hacer hover */
+  .group:hover .flecha-oculta {
+    opacity: 1;
+    animation: slide 3s linear infinite;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+
+  button::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(0, 0, 0, 0,1);
+    transform: translate(-50%,-50%) scale(0);
+    border-radius: 50%;
+    z-index: 0;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  button:hover::before{
+    transform: translate(-50%,-50%) scale(1);
+  }

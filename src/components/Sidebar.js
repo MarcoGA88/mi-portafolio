@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import profileImage from '../images/placeholder.png';
 import { Home, User, Briefcase, Layers, Mail, Twitter, Facebook, Instagram, Dribbble, Menu } from 'lucide-react';
 
 function Sidebar() {
   // Estado para controlar si el sidebar está abierto o cerrado en pantallas pequeñas
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation(); // Hook para obtener la ubicación actual
 
   const navItems = [
     { icon: Home, text: 'Home', path: '/' },
@@ -34,7 +35,7 @@ function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 w-80 md:min-w-[310px] md:max-w-[310px] bg-black text-white p-6 flex flex-col h-full border-r-[1px] border-stone-700 overflow-y-auto z-40 transform ${
+        className={`fixed top-0 left-0 w-72 md:min-w-[288px] md:max-w-[310px] bg-black text-white p-6 flex flex-col h-full border-r-[1px] border-stone-700 overflow-y-auto z-40 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         } transition-transform duration-300 md:relative md:translate-x-0`}
       >
@@ -48,7 +49,12 @@ function Sidebar() {
           <ul className="space-y-2">
             {navItems.map((item, index) => (
               <li key={index}>
-                <Link to={item.path} className={`flex items-center p-4 rounded-xl hover:bg-gray-800 hover:text-emerald-300  ${index === 0? 'bg-gray-800' : ''}`}>
+                <Link
+                  to={item.path}
+                  className={`flex items-center p-4 rounded-xl hover:bg-gray-800 hover:text-emerald-300 ${
+                    location.pathname === item.path ? 'bg-gray-800 text-emerald-300' : 'text-white'
+                  }`}
+                >
                   <item.icon className="mr-3" size={20} />
                   {item.text}
                 </Link>
@@ -80,3 +86,4 @@ function Sidebar() {
 }
 
 export default Sidebar;
+

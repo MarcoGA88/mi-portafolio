@@ -125,18 +125,35 @@ function Home() {
             Ver más →
           </Link>
       </div>
-            {/* Contact Section */}
-            <div className="w-full max-w-6xl pl-1">
-          <div className="px-5">
-            {/* Stack 1*/}
-            <Link
-            to="/contact"
-            className="bg-transparent hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 "
-            >
-            <p className="text-9xl mb-2 text-center"> ¡Contáctame! </p>
-            </Link>
-          </div>
+      
+      <div className="w-full max-w-6xl pl-1">
+  <div className="px-5">
+    {/* Sección de Contacto */}
+    <Link to="/contact" className="group relative block text-center">
+      <p className="text-6xl md:text-9xl mb-2 transition-transform duration-300 hover:scale-110 text-white group-hover:text-emerald-300">
+        ¡Contáctame!
+      </p>
+      
+      {/* Contenedor de flechas animadas */}
+      <div className="relative overflow-hidden h-12 mt-4">
+        {/* Flechas */}
+        <div className="absolute left-[-150%] flex justify-center items-center whitespace-nowrap transition-all duration-500 ease-in-out group-hover:left-0">
+          <span className="text-4xl text-emerald-300 mr-8">→</span>
+          <span className="text-4xl text-emerald-300 mr-8">→</span>
+          <span className="text-4xl text-emerald-300 mr-8">→</span>
+          <span className="text-4xl text-emerald-300 mr-8">→</span>
+          <span className="text-4xl text-emerald-300 mr-8">→</span>
+          <span className="text-4xl text-emerald-300 mr-8">→</span>
+          <span className="text-4xl text-emerald-300 mr-8">→</span>
         </div>
+      </div>
+    </Link>
+  </div>
+</div>
+
+
+
+
       <Footer></Footer>
     </div>
   );
