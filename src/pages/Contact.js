@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin} from 'lucide-react';
 import Footer from '../components/Footer'
+import AnimatedButton from '../components/AnimatedButton';
 
 
 function Contact() {
@@ -25,12 +26,9 @@ function Contact() {
             <div className='grid grid-cols-1 md:grid-cols-1 gap-8 py-2 '>
             <textarea type='text' name='textarea' required rows={10} className='md:min-w-96 h-60 rounded-xl bg-gray-700 focus:border-emerald-300 p-3 shadow-sm border border-black focus:outline-none focus:right-1 focus:ring-emerald-300' placeholder='Escribe un mensaje...'></textarea>
             </div>
-            <div className="flex items-center justify-center h-screen">
-                <button className="relative px-6 py-3 text-white bg-emerald-300 rounded-xl overflow-hidden group" type='submit'>
-                    <span className='relative z-10'> Enviar</span>
-                    <div className='absolute inset-0 bg-gray-700 transition-all duration-75 ease-out scale-0 rounded-xl group-hover:scale-100 origin-center'></div>
-                </button>
-            </div>
+            <AnimatedButton></AnimatedButton>
+            <input type='hidden' name='_next' value={"http://localhost:3000/contact"}></input>
+            <input type='hidden' name='_captcha' value={"false"}></input>
         </form>
         </div>
 
