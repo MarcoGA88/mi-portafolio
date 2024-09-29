@@ -27,7 +27,7 @@ function Contact() {
             <textarea type='text' name='textarea' required rows={10} className='md:min-w-96 h-60 rounded-xl bg-gray-700 focus:border-emerald-300 p-3 shadow-sm border border-black focus:outline-none focus:right-1 focus:ring-emerald-300' placeholder='Escribe un mensaje...'></textarea>
             </div>
             <AnimatedButton></AnimatedButton>
-            <input type='hidden' name='_next' value={"http://localhost:3000/contact"}></input>
+            <input type='hidden' name='_next' value={"https://immarcogm.vercel.app/contact"}></input>
             <input type='hidden' name='_captcha' value={"false"}></input>
         </form>
         </div>
