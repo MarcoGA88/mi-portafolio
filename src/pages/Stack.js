@@ -38,11 +38,14 @@ function Stack() {
           ))}
         </div>
       </div>
+      {/* Contact Section */}
 
-      <div className="w-full max-w-4xl md:max-w-6xl mt-20">
-        <Link to="/contact" className="block bg-transparent hover:text-emerald-300 transition-colors duration-300 text-center">
-          <p className="text-5xl sm:text-7xl md:text-9xl">¡Contáctame!</p>
-        </Link>
+      <div className="w-full max-w-4xl md:max-w-6xl pl-1">
+        <div className="px-5">
+          <Link to="/contact" className="bg-transparent hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 ">
+            <p className="text-5xl sm:text-7xl md:text-9xl mb-2 text-center"> ¡Contáctame! </p>
+          </Link>
+        </div>
       </div>
       <Footer />
     </div>
