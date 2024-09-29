@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin} from 'lucide-react';
 import Footer from '../components/Footer'
-
+import ButtonStack from '../components/ButtonStack';
 
 function About() {
   return (
@@ -10,8 +10,9 @@ function About() {
       {/* Section for Introduction */}
       <div className='px-5'>
         <h1 className="text-5xl sm:text-5xl md:text-5xl mb-4 ml-0 py-5 mt-20">Un poco más sobre mi</h1>
-        <p className="text-base md:text-base text-gray-400 mb-6 pr-32">
-        Bienvenido a mi portafolio. Soy un estudiante de ingeniería en software, con experiencia en diseño y desarrollo web y algúnos lenguajes de porgramación como C/C++, JavaScript y C#. Mi pasión es crear soluciones digitales innovadoras que no solo cumplen con los requisitos técnicos, sino que también deleitan a los usuarios.
+        <p className="text-base md:text-base text-gray-400 mb-6 pr-32 text-justify">
+        Hola, mi nombre es Marco Gabilanes, soy un estudiante de ingeniería en software. Siempre he tenido fascinación por el arte del diseño y desarrollo web, mi travesía durante mi proceso de formación como ingeniero en software me ha llevado a querer conocer y poner en práctica muchas tecnologías en el área de desarrollo de software. Con experiencia en diseño y desarrollo web, así como en lenguajes de programación como C/C++, JavaScript y C#, mi objetivo es crear soluciones digitales innovadoras que no solo cumplan los requisitos técnicos, sino también deleiten a los usuarios con experiencias excepcionales. <br></br><br></br> 
+        Mi pasión radica en crear sitios y aplicaciones que combinen la funcionalidad con el diseño adecuado para que el usuario tenga un producto visualmente atractivo. Ya sea un sitio web corporativo, una plataforma de comercio electrónico y demás aplicaciones, me esfuerzo por crear soluciones digitales creativas que no solo funcionen a la perfección, sino que también inspiren, cautiven y dejen una impresión duradera en la mente de cada visitante. Porque en el ámbito digital, las historias bien contadas son las que realmente perduran.
         </p>
 
         {/* Location and Button */}
@@ -61,9 +62,8 @@ function About() {
           <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.........................................................................</div>
           <Link
             to="/stack"
-            className="bg-transparent border border-gray-500 hover:bg-gray-700 hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 rounded-xl hover:border-emerald-300"
           >
-            Ver Stack→
+        <ButtonStack></ButtonStack>
           </Link>
       </div>
 

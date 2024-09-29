@@ -8,7 +8,7 @@ function Projects() {
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center px-10">
       {/* Recent Projects Section */}
       <div className="w-full max-w-6xl pl-1 px-5">
-      <h1 className="text-5xl sm:text-5xl md:text-5xl mb-4 ml-0 py-4 mt-20 px-5">My Remarkable Projects</h1>
+      <h1 className="text-5xl sm:text-5xl md:text-5xl mb-4 ml-0 py-4 mt-20 px-5">Mi galeria de proyectos</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5 py-10">
           {/* Project 1 */}
           <Link

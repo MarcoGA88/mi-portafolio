@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import IcoFigma from '../images/figma.png';
 import IcoCss from '../images/css3.png';
 import IcoHtml from '../images/html5.png';
+import iconC from '../images/C++_logo.png';
+import iconCsharp from '../images/c-sharp.png';
+import iconJavaS from '../images/png-javascript-badge-picture-8.png';
 import Footer from '../components/Footer'
 
 function Stack() {
@@ -25,14 +28,16 @@ function Stack() {
               <p className="text-gray-400 pb-1">Diseño colaborativo</p>
               <div className=' border-dotted border-emerald-300 h-4 border-s-3'></div>
               <div className='text-gray-400'>
-                  jakjnfm
+                  <p>
+                  Figma es mi herramienta favorita para el diseño colaborativo. La utilizo a diario para trabajar mano a mano con mis compañeros de equipo y clientes, facilitando un flujo de retroalimentación en tiempo real y permitiendo iteraciones ágiles en los diseños. Su enfoque basado en la nube realmente agiliza y simplifica todo el proceso creativo.
+                  </p>
               </div>
               </div>
 
             </div>
 
             {/* Stack 2 */}
-            <div className="bg-gray-900 p-6 rounded-3xl border-gray-900 border md:h-full sm:h-40 flex">
+            <div className="bg-gray-900 p-6 rounded-3xl border-gray-900 border md:h-full sm:h-full h-full flex">
               <img
                 src={IcoCss}
                 alt="Css"
@@ -43,7 +48,7 @@ function Stack() {
               <p className="text-gray-400">Estilo visual Web</p>
               <div className=' border-dotted border-emerald-300 h-4 border-s-3'></div>
               <div className='text-gray-400'>
-                  jakjnfm
+                  <p>El CSS es uno de los lenguajes que manejo con soltura y pasión. Me permite dar vida a diseños web cautivadores y adaptativos, asegurando que la experiencia de usuario sea excepcional en cualquier dispositivo o pantalla. Desde la elección de la paleta de colores hasta las animaciones sutiles, el CSS es mi lienzo para plasmar cada detalle visual.</p>
               </div>
               </div>
             </div>
@@ -61,7 +66,7 @@ function Stack() {
               <p className="text-gray-400">Estrcutura y contenido</p>
               <div className=' border-dotted border-emerald-300 h-4 border-s-3'></div>
               <div className='text-gray-400'>
-                  jakjnfm
+                  <p>El HTML es el lenguaje de marcado que utilizo como base para estructurar y dar forma a los sitios web. Con él, puedo definir la arquitectura de la página, organizando contenido, creando secciones y estableciendo una jerarquía visual. El HTML es el esqueleto sobre el cual construyo experiencias web atractivas e intuitivas.</p>
               </div>
               </div>
             </div>
@@ -69,7 +74,7 @@ function Stack() {
               {/* Stack 4*/}
               <div className="bg-gray-900 p-6 rounded-3xl border-gray-900 border md:h-full sm:h-full flex">
               <img
-                  src={IcoHtml}
+                  src={iconC}
                   alt="Html"
                   className="w-20 sm:pt-4 md:h-full md:pt-0 object-contain mb-4"
                 />
@@ -79,7 +84,7 @@ function Stack() {
               <p className="text-gray-400">Estrcutura y contenido</p>
               <div className=' border-dotted border-emerald-300 h-4 border-s-3'></div>
               <div className='text-gray-400'>
-                  jakjnfm
+                  <p>Estos lenguajes de programación son de los que cuento con más experiencia dentro de mi arsenal técnico. C y C++ me brindan la capacidad de desarrollar aplicaciones de software robustas y eficientes, ya sean programas de escritorio, sistemas embebidos o soluciones empresariales complejas. Su potencia y control de bajo nivel me permiten empujar los límites de lo posible.</p>
               </div>
               </div>
             </div>
@@ -87,7 +92,7 @@ function Stack() {
                 {/* Stack 5 */}
             <div className="bg-gray-900 p-6 rounded-3xl border-gray-900 border md:h-full sm:h-full flex">
                 <img
-                  src={IcoHtml}
+                  src={iconJavaS}
                   alt="Html"
                   className="w-20 sm:pt-4 md:h-full md:pt-0 object-contain mb-4"
                 />
@@ -97,7 +102,7 @@ function Stack() {
               <p className="text-gray-400">Estrcutura y contenido</p>
               <div className=' border-dotted border-emerald-300 h-4 border-s-3'></div>
               <div className='text-gray-400'>
-                  jakjnfm
+                  <p>En el mundo del desarrollo web, JavaScript es mi un lenguaje con bastante potencian dentro de mi stack de herramientas. Este lenguaje dinámico me permite agregar interactividad y dinamismo a las páginas web y aplicaciones, mejorando notablemente la experiencia del usuario final. Desde animaciones suaves hasta funcionalidades complejas, JavaScript es mi aliado para llevar las interfaces a un nuevo nivel.</p>
               </div>
               </div>
             </div>
@@ -105,7 +110,7 @@ function Stack() {
             {/* Stack 5 */}
             <div className="bg-gray-900 p-6 rounded-3xl border-gray-900 border md:h-full sm:h-full flex">
                 <img
-                  src={IcoHtml}
+                  src={iconCsharp}
                   alt="Html"
                   className="w-20 sm:pt-4 md:h-full md:pt-0 object-contain mb-4"
                 />
@@ -115,7 +120,7 @@ function Stack() {
               <p className="text-gray-400">Estrcutura y contenido</p>
               <div className=' border-dotted border-emerald-300 h-4 border-s-3'></div>
               <div className='text-gray-400'>
-                  jakjnfm
+                  <p>C# es otro lenguaje versátil que domino y que me ha acompañado en numerosos proyectos. Dentro del ecosistema de Microsoft, me ha permitido crear aplicaciones de escritorio, servicios web y hasta videojuegos. Su sintaxis elegante y su amplia gama de bibliotecas lo convierten en una herramienta invaluable para cualquier desarrollador.</p>
               </div>
               </div>
             </div>

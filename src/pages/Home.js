@@ -5,8 +5,12 @@ import IcoFigma from '../images/figma.png';
 import IcoCss from '../images/css3.png';
 import IcoHtml from '../images/html5.png';
 import Footer from '../components/Footer'
+import ButtonLink from '../components/Buttonlink';
+import ButtonAbout from '../components/ButtonAbout';
+
 
 function Home() {
+  
   return (
     <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center px-10">
       {/* Section for Introduction */}
@@ -25,9 +29,8 @@ function Home() {
           <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.........................................................</div>
           <Link
             to="/about"
-            className="bg-transparent border border-gray-500 hover:bg-gray-700 hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4  rounded-xl hover:border-emerald-300"
           >
-            Más sobre mi →
+            <ButtonAbout></ButtonAbout>
           </Link>
 
         </div>
@@ -64,9 +67,9 @@ function Home() {
           <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
           <Link
             to="/projects"
-            className="bg-transparent border border-gray-500 hover:bg-gray-700 hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 rounded-xl hover:border-emerald-300"
-          >
-            Ver más →
+         >
+          <ButtonLink></ButtonLink>
+
           </Link>
       </div>
 
@@ -120,40 +123,22 @@ function Home() {
           <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
           <Link
             to="/stack"
-            className="bg-transparent border border-gray-500 hover:bg-gray-700 hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 rounded-xl hover:border-emerald-300"
           >
-            Ver más →
+           <ButtonLink></ButtonLink>
           </Link>
       </div>
-      
-      <div className="w-full max-w-6xl pl-1">
-  <div className="px-5">
-    {/* Sección de Contacto */}
-    <Link to="/contact" className="group relative block text-center">
-      <p className="text-6xl md:text-9xl mb-2 transition-transform duration-300 hover:scale-110 text-white group-hover:text-emerald-300">
-        ¡Contáctame!
-      </p>
-      
-      {/* Contenedor de flechas animadas */}
-      <div className="relative overflow-hidden h-12 mt-4">
-        {/* Flechas */}
-        <div className="absolute left-[-150%] flex justify-center items-center whitespace-nowrap transition-all duration-500 ease-in-out group-hover:left-0">
-          <span className="text-4xl text-emerald-300 mr-8">→</span>
-          <span className="text-4xl text-emerald-300 mr-8">→</span>
-          <span className="text-4xl text-emerald-300 mr-8">→</span>
-          <span className="text-4xl text-emerald-300 mr-8">→</span>
-          <span className="text-4xl text-emerald-300 mr-8">→</span>
-          <span className="text-4xl text-emerald-300 mr-8">→</span>
-          <span className="text-4xl text-emerald-300 mr-8">→</span>
+            {/* Contact Section */}
+            <div className="w-full max-w-6xl pl-1">
+          <div className="px-5">
+            {/* Stack 1*/}
+            <Link
+            to="/contact"
+            className="bg-transparent hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 "
+            >
+            <p className="text-9xl mb-2 text-center"> ¡Contáctame! </p>
+            </Link>
+          </div>
         </div>
-      </div>
-    </Link>
-  </div>
-</div>
-
-
-
-
       <Footer></Footer>
     </div>
   );
