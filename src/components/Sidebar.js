@@ -23,6 +23,11 @@ function Sidebar() {
     setIsOpen(!isOpen);
   };
 
+  // Función para cerrar el sidebar
+  const closeSidebar = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       {/* Botón de menú hamburguesa visible solo en pantallas pequeñas */}
@@ -51,6 +56,7 @@ function Sidebar() {
               <li key={index}>
                 <Link
                   to={item.path}
+                  onClick={closeSidebar} // Cierra el sidebar al hacer clic
                   className={`flex items-center p-4 rounded-xl hover:bg-gray-800 hover:text-emerald-300 ${
                     location.pathname === item.path ? 'bg-gray-800 text-emerald-300' : 'text-white'
                   }`}
@@ -86,4 +92,3 @@ function Sidebar() {
 }
 
 export default Sidebar;
-
