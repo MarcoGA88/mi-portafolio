@@ -1,50 +1,52 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin } from 'lucide-react';
+import { MapPin} from 'lucide-react';
 import IcoFigma from '../images/figma.png';
 import IcoCss from '../images/css3.png';
 import IcoHtml from '../images/html5.png';
-import Footer from '../components/Footer';
+import Footer from '../components/Footer'
 import ButtonLink from '../components/Buttonlink';
 import ButtonAbout from '../components/ButtonAbout';
 
+
+
 function Home() {
+  
   return (
-    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center px-4 md:px-10">
+    <div className="bg-black text-white min-h-screen flex flex-col justify-center items-center px-10">
       {/* Section for Introduction */}
-      <div className="w-full max-w-6xl py-10">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl mb-4 py-5 mt-10 text-center md:text-left">
-          Hola a todos, soy Marco
-        </h1>
-        <p className="text-sm sm:text-base md:text-lg text-gray-400 mb-6 pr-0 md:pr-32 text-center md:text-left">
-          Bienvenido a mi portafolio. Soy un estudiante de ingeniería en software, con experiencia en diseño y desarrollo web y algunos lenguajes de programación como C/C++, JavaScript y C#. Mi pasión es crear soluciones digitales innovadoras que no solo cumplen con los requisitos técnicos, sino que también deleitan a los usuarios.
+      <div className='px-5'>
+        <h1 className="text-5xl sm:text-5xl md:text-5xl mb-4 ml-0 py-5 mt-20">Hola a todos, soy Marco</h1>
+        <p className="text-base md:text-base text-gray-400 mb-6 pr-32">
+        Bienvenido a mi portafolio. Soy un estudiante de ingeniería en software, con experiencia en diseño y desarrollo web y algúnos lenguajes de porgramación como C/C++, JavaScript y C#. Mi pasión es crear soluciones digitales innovadoras que no solo cumplen con los requisitos técnicos, sino que también deleitan a los usuarios.
         </p>
 
         {/* Location and Button */}
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-center md:justify-start space-y-2 md:space-y-0 md:space-x-4 mb-10 text-sm">
+        <div className="flex flex-col md:flex-row items-start justify-start space-y-2 md:space-y-0 md:space-x-4 mb-10 text-xs">
           <div className="flex items-center space-x-2 text-gray-500 pt-3">
-            <MapPin color="rgb(110 231 183)" />
+            <span><icon><MapPin color='rgb(110 231 183)' /></icon></span>
             <span>Ambato, Ecuador</span>
           </div>
-          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none">
-            .....................................................
-          </div>
-          <Link to="/about">
-            <ButtonAbout />
+          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.........................................................</div>
+          <Link
+            to="/about"
+          >
+            <ButtonAbout></ButtonAbout>
           </Link>
+
         </div>
       </div>
 
       {/* Recent Projects Section */}
-      <div className="w-full max-w-6xl py-10">
-        <h2 className="text-2xl md:text-3xl mb-8 text-center md:text-left">Recent Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+      <div className="w-full max-w-6xl pl-1 py-4 mt-3">
+        <h2 className="text-2xl md:text-3xl mb-8 text-left px-5">Recent Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-5">
           {/* Project 1 */}
           <div className="bg-gray-900 p-6 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:border-emerald-300 hover:border">
             <img
               src="path-to-project-1-image"
               alt="Project 1"
-              className="w-full h-40 md:h-80 object-cover mb-4"
+              className="w-full h-80 object-cover mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Project 1</h3>
             <p className="text-gray-400">A brief description of the project.</p>
@@ -55,81 +57,90 @@ function Home() {
             <img
               src="path-to-project-2-image"
               alt="Project 2"
-              className="w-full h-40 md:h-80 object-cover mb-4"
+              className="w-full h-80 object-cover mb-4"
             />
             <h3 className="text-xl font-semibold mb-2">Project 2</h3>
             <p className="text-gray-400">A brief description of the project.</p>
           </div>
         </div>
-        <div className="flex justify-center md:justify-start space-x-4 mt-10">
-          <Link to="/projects">
-            <ButtonLink />
-          </Link>
-        </div>
       </div>
-
-      {/* Stack Section */}
-      <div className="w-full max-w-6xl py-10">
-        <h2 className="text-2xl md:text-3xl mb-8 text-center md:text-left">Stack</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 px-4">
-          {/* Stack 1 */}
-          <div className="bg-gray-900 p-6 rounded-xl border-gray-900 border flex items-center">
-            <img
-              src={IcoFigma}
-              alt="Figma"
-              className="w-20 sm:w-24 md:w-28 object-contain mb-4"
-            />
-            <div className="pl-4">
-              <h3 className="text-lg md:text-xl mb-2">Figma</h3>
-              <p className="text-gray-400">Diseño colaborativo</p>
-            </div>
-          </div>
-
-          {/* Stack 2 */}
-          <div className="bg-gray-900 p-6 rounded-xl border-gray-900 border flex items-center">
-            <img
-              src={IcoCss}
-              alt="Css"
-              className="w-20 sm:w-24 md:w-28 object-contain mb-4"
-            />
-            <div className="pl-4">
-              <h3 className="text-lg md:text-xl mb-2">CSS 3</h3>
-              <p className="text-gray-400">Estilo visual Web</p>
-            </div>
-          </div>
-
-          {/* Stack 3 */}
-          <div className="bg-gray-900 p-6 rounded-xl border-gray-900 border flex items-center">
-            <img
-              src={IcoHtml}
-              alt="Html"
-              className="w-20 sm:w-24 md:w-28 object-contain mb-4"
-            />
-            <div className="pl-4">
-              <h3 className="text-lg md:text-xl mb-2">HTML 5</h3>
-              <p className="text-gray-400">Estructura y contenido</p>
-            </div>
-          </div>
-        </div>
-        <div className="flex justify-center md:justify-start space-x-4 mt-10">
-          <Link to="/stack">
-            <ButtonLink />
-          </Link>
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <div className="w-full max-w-6xl py-10">
-        <div className="text-center">
+      <div className="flex flex-col md:flex-row items-start justify-start space-y-2 md:space-y-0 md:space-x-4 mb-10 text-xs pt-10">
+          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
           <Link
-            to="/contact"
-            className="bg-transparent hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-3xl md:text-4xl"
-          >
-            ¡Contáctame!
+            to="/projects"
+         >
+          <ButtonLink></ButtonLink>
+
           </Link>
-        </div>
       </div>
-      <Footer />
+
+        {/* Stack Section */}
+        <div className="w-full max-w-6xl pl-1 md:w-full py-4 mt-3">
+          <h2 className="text-2xl md:text-3xl mb-8 text-left px-5">Stack</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-8 px-5">
+            {/* Stack 1*/}
+            <div className="bg-gray-900 p-6 rounded-xl border-gray-900 border md:h-28 sm:h-40 flex">
+              <img
+                src={IcoFigma}
+                alt="Figma"
+                className="w-20 sm:pt-4 md:h-full md:pt-1 object-contain mb-4"
+              />
+              <div>
+              <h3 className="text-lg mb-2">Figma</h3>
+              <p className="text-gray-400">Diseño colaborativo</p>
+              </div>
+
+            </div>
+
+            {/* Stack 2 */}
+            <div className="bg-gray-900 p-6 rounded-xl  border-gray-900 border md:h-28 sm:h-40 flex">
+              <img
+                src={IcoCss}
+                alt="Css"
+                className="w-20 sm:pt-4 md:h-full md:pt-0 object-contain mb-4 pr-1 mr-1"
+              />
+              <div className=''>
+              <h3 className="text-lg mb-2">CSS 3</h3>
+              <p className="text-gray-400">Estilo visual Web</p>
+              </div>
+            </div>
+
+              {/* Stack 3 */}
+              <div className="bg-gray-900 p-6 rounded-xl border-gray-900 border md:h-28 sm:h-40 flex">
+              <img
+                  src={IcoHtml}
+                  alt="Html"
+                  className="w-20 sm:pt-4 md:h-full md:pt-0 object-contain mb-4"
+                />
+
+              <div className=''>
+              <h3 className="text-lg mb-2">HTML 5</h3>
+              <p className="text-gray-400">Estrcutura y contenido</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row items-start justify-start space-y-2 md:space-y-0 md:space-x-4 mb-10 text-xs pt-10">
+          <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
+          <Link
+            to="/stack"
+          >
+           <ButtonLink></ButtonLink>
+          </Link>
+      </div>
+            {/* Contact Section */}
+            <div className="w-full max-w-6xl pl-1">
+          <div className="px-5">
+            {/* Stack 1*/}
+            <Link
+            to="/contact"
+            className="bg-transparent hover:text-emerald-300 hover:scale-110 transition-transform duration-300 text-white text-sm py-3 px-4 "
+            >
+            <p className="text-9xl mb-2 text-center"> ¡Contáctame! </p>
+            </Link>
+          </div>
+        </div>
+      <Footer></Footer>
     </div>
   );
 }
