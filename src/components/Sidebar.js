@@ -1,36 +1,35 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import profileImage from '../images/placeholder.png';
+import profileImage from '../images/freepik-export-20241019214255UwQX.jpeg';
 import { Home, User, Briefcase, Layers, Mail, Twitter, Facebook, Instagram, Dribbble, Menu } from 'lucide-react';
 
 function Sidebar() {
-  // Estado para controlar si el sidebar está abierto o cerrado en pantallas pequeñas
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation(); // Hook para obtener la ubicación actual
+  const location = useLocation();
+
+  // Definir cuál opción quieres deshabilitar
+  const isProjectsDisabled = true;
 
   const navItems = [
-    { icon: Home, text: 'Home', path: '/' },
-    { icon: User, text: 'About', path: '/about' },
-    { icon: Briefcase, text: 'Projects', path: '/projects' },
+    { icon: Home, text: 'Inicio', path: '/' },
+    { icon: User, text: 'Sobre mi', path: '/about' },
+    { icon: Briefcase, text: 'Proyectos', path: '/projects', disabled: isProjectsDisabled },
     { icon: Layers, text: 'Stack', path: '/stack' },
-    { icon: Mail, text: 'Contact', path: '/contact' },
+    { icon: Mail, text: 'Contacto', path: '/contact' },
   ];
 
   const socialIcons = [Twitter, Facebook, Instagram, Dribbble];
 
-  // Función para alternar el sidebar
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
-  // Función para cerrar el sidebar
   const closeSidebar = () => {
     setIsOpen(false);
   };
 
   return (
     <>
-      {/* Botón de menú hamburguesa visible solo en pantallas pequeñas */}
       <button
         onClick={toggleSidebar}
         className="md:hidden fixed top-4 left-4 z-50 p-2 bg-black text-white rounded-full focus:outline-none"
@@ -38,7 +37,6 @@ function Sidebar() {
         <Menu size={24} />
       </button>
 
-      {/* Sidebar */}
       <aside
         className={`fixed top-0 left-0 w-72 md:min-w-[288px] md:max-w-[310px] bg-black text-white p-6 flex flex-col h-full border-r-[1px] border-stone-700 overflow-y-auto z-40 transform ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
@@ -55,11 +53,11 @@ function Sidebar() {
             {navItems.map((item, index) => (
               <li key={index}>
                 <Link
-                  to={item.path}
-                  onClick={closeSidebar} // Cierra el sidebar al hacer clic
+                  to={item.disabled ? "#" : item.path} // Evita redireccionar si está deshabilitado
+                  onClick={item.disabled ? (e) => e.preventDefault() : closeSidebar} // Deshabilitar acción
                   className={`flex items-center p-4 rounded-xl hover:bg-gray-800 hover:text-emerald-300 ${
                     location.pathname === item.path ? 'bg-gray-800 text-emerald-300' : 'text-white'
-                  }`}
+                  } ${item.disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`} // Estilo de deshabilitado
                 >
                   <item.icon className="mr-3" size={20} />
                   {item.text}
@@ -71,7 +69,6 @@ function Sidebar() {
         <div className="mt-auto">
           <div className="flex justify-start space-x-4 px-14">
             {socialIcons.map((Icon, index) => (
-              // eslint-disable-next-line jsx-a11y/anchor-is-valid
               <a key={index} href="#" className="text-gray-400 hover:text-white">
                 <Icon size={20} />
               </a>
@@ -80,7 +77,6 @@ function Sidebar() {
         </div>
       </aside>
 
-      {/* Fondo oscuro cuando el sidebar está abierto */}
       {isOpen && (
         <div
           onClick={toggleSidebar}

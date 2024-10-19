@@ -31,11 +31,11 @@ function Home() {
         </div>
       </div>
 
-      {/* Recent Projects Section */}
+      {/* Recent Projects Section 
       <div className="w-full max-w-4xl md:max-w-6xl pl-1 py-4 mt-3">
-        <h2 className="text-xl sm:text-2xl md:text-3xl mb-8 text-left px-5">Recent Projects</h2>
+        <h2 className="text-xl sm:text-2xl md:text-3xl mb-8 text-left px-5">Proyectos Recientes</h2>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-8 px-5">
-          {/* Project 1 */}
+         
           <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:border-emerald-300 hover:border">
             <img
               src="path-to-project-1-image"
@@ -46,7 +46,7 @@ function Home() {
             <p className="text-gray-400">A brief description of the project.</p>
           </div>
 
-          {/* Project 2 */}
+          
           <div className="bg-gray-900 p-4 sm:p-6 rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer hover:border-emerald-300 hover:border">
             <img
               src="path-to-project-2-image"
@@ -58,14 +58,14 @@ function Home() {
           </div>
         </div>
       </div>
-
+      
       <div className="flex flex-col md:flex-row items-start justify-start space-y-2 md:space-y-0 md:space-x-4 mb-10 text-xs pt-10">
         <div className="hidden md:block text-emerald-300 pl-px pt-3 font-light cursor-default select-none" style={{ letterSpacing: '0.85em' }}>.......................................................................</div>
         <Link to="/projects">
           <ButtonLink />
         </Link>
       </div>
-
+*/}
       {/* Stack Section */}
       <div className="w-full max-w-4xl md:max-w-6xl pl-1 py-4 mt-3">
         <h2 className="text-xl sm:text-2xl md:text-3xl mb-8 text-left px-5">Stack</h2>

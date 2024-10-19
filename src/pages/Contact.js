@@ -43,7 +43,7 @@ function Contact() {
                 name='textarea'
                 required
                 rows={6}
-                className='w-full rounded-lg bg-gray-700 focus:border-emerald-300 p-4 shadow-sm border border-black focus:outline-none focus:right-1 focus:ring-emerald-300 text-base'
+                className='w-full rounded-lg bg-gray-700 focus:border-emerald-300 p-4 shadow-sm border border-black focus:outline-none focus:right-1 focus:ring-emerald-300 text-base resize-none'
                 placeholder='Escribe un mensaje...'
               />
             </div>
