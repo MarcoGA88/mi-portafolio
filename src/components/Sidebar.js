@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import profileImage from '../images/freepik-export-20241019214255UwQX.jpeg';
+import profileImage from '../images/perfil.jpg';
 import { Home, User, Briefcase, Layers, Mail, Twitter, Facebook, Instagram, Dribbble, Menu } from 'lucide-react';
 
 function Sidebar() {
